@@ -4,7 +4,7 @@ A(n)________is a set of instructions that a computer follows to perform a task.
 
 compiler
 
-program
+->program
 
 interpreter
 
@@ -12,7 +12,7 @@ programming language
 
 The physical devices that a computer is made of are referred to as___________.
 
-hardware
+->hardware
 
 software
 
@@ -28,13 +28,13 @@ secondary storage
 
 main memory
 
-the CPU
+->the CPU
 
 Today, CPUs are small chips known as____________.
 
 ENIACs
 
-microprocessors
+->microprocessors
 
 memory chips
 
@@ -46,13 +46,13 @@ secondary storage
 
 the CPU
 
-main memory
+->main memory
 
 the microprocessor
 
 This is a volatile type of memory that is used only for temporary storage while a program is running.
 
-RAM
+->RAM
 
 secondary storage
 
@@ -66,7 +66,7 @@ RAM
 
 main memory
 
-secondary storage
+->secondary storage
 
 CPU storage
 
@@ -74,7 +74,7 @@ A component that collects data from people or other devices and sends it to the 
 
 an output device
 
-an input device
+->an input device
 
 a secondary storage device
 
@@ -82,7 +82,7 @@ main memory
 
 A video display is a(n)         .
 
-output device
+->output device
 
 input device
 
@@ -92,7 +92,7 @@ main memory
 
 A___________-is enough memory to store a letter of the alphabet or a small number.
 
-byte
+->byte
 
 bit
 
@@ -108,13 +108,13 @@ instructions
 
 variables
 
-bits
+->bits
 
 In a(n)___________numbering system, all numeric values are written as sequences of 0s and 1s.
 
 hexadecimal
 
-binary
+->binary
 
 octal
 
@@ -126,7 +126,7 @@ A bit that is turned off represents the following value:         .
 
 −1
 
-0
+->0
 
 “no”
 
@@ -134,7 +134,7 @@ A set of 128 numeric codes that represent the English letters, various punctuati
 
 binary numbering
 
-ASCII
+->ASCII
 
 Unicode
 
@@ -146,13 +146,13 @@ binary numbering
 
 ASCII
 
-Unicode
+->Unicode
 
 ENIAC
 
 Negative numbers are encoded using the____________technique.
 
-two’s complement
+->two’s complement
 
 floating-point
 
@@ -164,7 +164,7 @@ Real numbers are encoded using the____________technique.
 
 two’s complement
 
-floating-point
+->floating-point
 
 ASCII
 
@@ -178,13 +178,13 @@ bytes
 
 color packets
 
-pixels
+->pixels
 
 If you were to look at a machine language program, you would see______________.
 
 Java code
 
-a stream of binary numbers
+->a stream of binary numbers
 
 English words
 
@@ -194,7 +194,7 @@ In the_______________part of the fetch-decode-execute cycle, the CPU determines 
 
 fetch
 
-decode
+->decode
 
 execute
 
@@ -206,13 +206,13 @@ Java
 
 assembly language
 
-machine language
+->machine language
 
 C++
 
 The____________translates an assembly language program to a machine language program.
 
-assembler
+->assembler
 
 compiler
 
@@ -228,11 +228,11 @@ mnemonics
 
 commands
 
-key words
+->key words
 
 The rules that must be followed when writing a program are called______________.
 
-syntax
+->syntax
 
 punctuation
 
@@ -244,7 +244,7 @@ A(n)_____________program translates a high-level language program into a separat
 
 assembler
 
-compiler
+->compiler
 
 translator
 
