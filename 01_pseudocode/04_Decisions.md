@@ -302,11 +302,85 @@ For each of the following Boolean expressions, decide whether the statement is t
 * wordSmall > wordMedium
 
 * Design a flowchart or pseudocode for a program that accepts three numbers from a user and displays a message if the sum of any two numbers equals the third. 
-
+```
+start
+  Declarations
+    num firstNum
+    num secondNum
+    num thirdNum
+    string msg = "Got it!"
+  GetNum()
+  Calc()
+  Finish()
+Stop
+```
 * ShoppingBay is an online auction service that requires several reports. Data for each auctioned item includes an ID number, item description, length of auction in days, and minimum required bid. Design a flowchart or pseudocode for the following: 
 
   * A program that accepts data for one auctioned item. Display data for an auction only if the minimum required bid is more than $250.00. 
+  ```
+  start
+    Declare integer id
+    Declare string description
+    Declare integer auctionLength
+    Declare real minimumBid
+    Constant Real MIN_BID = 250.00
+
+    GetAuctionItem()
+    CheckMinBid()
+  stop
+
+    GetAuctionItem()
+      output "Enter item ID"
+      input id
+      output "Enter item description"
+      input description
+      output "Enter auction length in days"
+      input auctionLength
+      output "Enter minimum required bid"
+      input minimumBid
+    return
+
+    CheckMinBid()
+      if minRequiredBid > MIN_BID then
+        output id, description, auctionLength, minimumBid
+      endif
+    return
+  ```
   * A program that continuously accepts auction item data until a sentinel value is entered and displays all data for auctions in which the minimum required bid is more than $300.00. 
+  ```
+  start
+    Declare integer id
+    Declare string description
+    Declare integer auctionLength
+    Declare real minimumBid
+    Declare string userInput
+    Constant string breakOut = "q"
+    While
+      output "Continue adding items?"
+      input userInput
+      GetAuctionItem()
+    Do
+      
+    
+  stop
+
+    GetAuctionItem()
+      output "Enter item ID"
+      input id
+      output "Enter item description"
+      input description
+      output "Enter auction length in days"
+      input auctionLength
+      output "Enter minimum required bid"
+      input minimumBid
+    return
+
+    CheckMinBid()
+      if minRequiredBid > MIN_BID then
+        output id, description, auctionLength, minimumBid
+      endif
+    return
+  ```
   * A program that continuously accepts auction item data and displays data for every auction in which there are no bids yet (in other words, the minimum bid is $0.00) and the length of the auction is seven days or less. 
   * A program that continuously accepts auction data and displays data for every auction in which the length is between 14 and 28 days inclusive. 
   * A program that prompts the user for a maximum required bid, and then continuously accepts auction data and displays data for every auction in which the minimum bid is less than or equal to the amount entered by the user.

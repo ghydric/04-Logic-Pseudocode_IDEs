@@ -27,6 +27,10 @@ A mobile phone app allows a user to press a button that starts a timer that coun
 
 * If the programmer translates the following pseudocode to an actual programming language, a syntax errror is likely to occur.  Can you find the error?
 
+// fix actions below:
+// variable 1stPrize cannot start with number
+// it could be changed to firstPrize instead
+// also there is a rogue apostrophe on line 40
 ```
 Declare String 1stPrize
 
@@ -39,6 +43,10 @@ Display "The first prize winner will receive "' 1stPrize
 ---
 
 * The following code will not display the results expected by the programmer.  Can you find the error?
+
+// fix actions below:
+// parenthesis need to surround lowest + highest
+// replace commas on line 61 with plus signs
 
 ```
 Declare Real lowest, highest, average
@@ -58,6 +66,9 @@ Display "The average is ", average, "."
 
 * Find the error in the following pseudocode
 
+// fix actions below:
+// Declare statement should be first in code
+
 ```
 Display "Enter the length of the room."
 Input length 
@@ -68,6 +79,9 @@ Declare Integer length
 ---
 
 * Find the error in the following pseudocode
+
+// fix actions below:
+// sum should be set following the values1-3
 
 ```
 Declare Integer value1, value2, value3, sum
@@ -90,6 +104,10 @@ Display "The sum of numbers is ", sum
 
 * Find the error in the following pseudocode
 
+// fix actions below:
+// line 113 should be Set pi = 3.14159265
+// replace period on line 114 with comma
+
 ```
 Declare Real pi
 Set 3.14159265 = pi
@@ -100,6 +118,8 @@ Display "The value of pi is ". pi
 
 * Find the error in the following pseudocode.
 
+// fix actions below:
+// Gravity cannot be changed if set as constant
 ```
 Constant Real GRAVITY = 9.81
 Display "Rates of acceleration of an objet in free fall:"

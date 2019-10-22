@@ -6,7 +6,7 @@ sequence
 
 circumstantial
 
-decision
+**decision**
 
 Boolean
 
@@ -14,7 +14,7 @@ A________structure provides one alternative path of execution.
 
 sequence
 
-single alternative decision
+**single alternative decision**
 
 one path alternative
 
