@@ -1,0 +1,39 @@
+//ShoppingBay #3
+
+//Module main
+
+Start
+	
+	//Declarations
+	Declare Integer idNumber
+	Declare Integer numDays
+	Declare Real minReqBid
+	Declare String itemDesc
+	
+	While True Do
+		NewAuctionItem()
+	EndWhile
+	
+Stop
+
+
+Start
+
+//NewAuctionItem()
+	
+	Prompt "Please enter ID Number"
+	Input idNumber
+	Prompt "Please enter item description"
+	Input itemDesc
+	Prompt "Please enter length of auction in days"
+	Input numDays
+	Prompt "Please enter the minimum required bid"
+	Input minReqBid
+	
+	if minReqBid == 0.00 AND numDays <= 7 then
+		Display idNumber, itemDesc, numDays, minReqBid
+	endif
+	
+	Return
+	
+Stop

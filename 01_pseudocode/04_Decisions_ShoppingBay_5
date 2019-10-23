@@ -1,0 +1,43 @@
+//ShoppingBay #5
+
+//Module main
+
+Start
+
+	//Declarations
+	Declare Integer idNumber
+	Declare Integer numDays
+	Declare Real minReqBid
+	Declare String itemDesc
+	Declare Real maxReqBid
+	
+	Prompt "Please enter maximum required bid"
+	Input maxReqBid
+	
+	While True
+		NewAuctionItem(maxReqBid)
+	EndWhile
+	
+Stop
+
+
+Start
+
+//NewAuctionItem(Real maxBid)
+	
+	Prompt "Please enter ID Number"
+	Input idNumber
+	Prompt "Please enter item description"
+	Input itemDesc
+	Prompt "Please enter length of auction in days"
+	Input numDays
+	Prompt "Please enter the minimum required bid"
+	Input minReqBid
+	
+	if minReqBid <= maxBid then
+		Display idNumber, itemDesc, numDays, minReqBid
+	endif
+	
+	Return
+	
+Stop
