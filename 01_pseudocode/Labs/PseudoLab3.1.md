@@ -25,9 +25,13 @@ End If
 End If
 ```
 5. Design nested decision structures that perform the following: If amount1 is greater than 10 and amount2 is less than 100, display the greater of amount1 and amount2.
+<<<<<<< HEAD
 ```
 if 
 ```
+=======
+
+>>>>>>> upstream/master
 6. Rewrite the following If-Then-Else If statement as a Select Case statement.
 ```
 If selection == 1 Then
@@ -42,6 +46,7 @@ Else
    Display "Not good with numbers, eh?"
 End If
 ```
+<<<<<<< HEAD
 Rewritten below:
 ```
 case selection:
@@ -68,6 +73,12 @@ else
    display "Valid points."
 endif
 ```
+=======
+7. Design an If-Then-Else statement (or a flowchart with a dual alternative decision structure) that displays “Speed is normal” if the speed variable is within the range of 24 to 56. If speed holds a value outside this range, display “Speed is abnormal.”
+
+8. Design an If-Then-Else statement (or a flowchart with a dual alternative decision structure) that determines whether the points variable is outside the range of 9 to 51. If the variable holds a value outside this range it should display “Invalid points.” Otherwise, it should display “Valid points.”
+
+>>>>>>> upstream/master
 9. Design a case structure that tests the month variable and does the following:
 
 * If the month variable is set to 1, it displays “January has 31 days.”
@@ -76,6 +87,7 @@ endif
 
 * If the month variable is set to 3, it displays “March has 31 days.”
 
+<<<<<<< HEAD
 * If the month variable is set to anything else, it displays “Invalid selection.”  
 ```
 case month:
@@ -92,3 +104,9 @@ if minimum then
    set hours = 10
 endif
 ```
+=======
+* If the month variable is set to anything else, it displays “Invalid selection.”
+
+10. Write an If-Then statement that sets the variable hours to 10 when the flag variable minimum is set.
+
+>>>>>>> upstream/master

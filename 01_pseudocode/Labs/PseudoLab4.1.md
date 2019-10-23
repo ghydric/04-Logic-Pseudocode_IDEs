@@ -3,6 +3,7 @@
 
 Design a modular program that asks the user to enter a distance in kilometers, and then converts that distance to miles. The conversion formula is as follows:
 
+<<<<<<< HEAD
 Miles = Kilometers * 0.6214  
 ```  
 //main()
@@ -23,6 +24,10 @@ Miles = Kilometers * 0.6214
     Return (kmDist * CONVERSION)
 //Stop
 ```  
+=======
+![image](https://user-images.githubusercontent.com/47218880/67329523-99b2e300-f4e0-11e9-8a30-3f31fbd76ae1.png)
+
+>>>>>>> upstream/master
 ## Sales Tax Program Refactoring (Mandatory)
 
 See program below,  the Sales Tax program. This program calculates and displays the county and state sales tax on a purchase. Refactor it so the subtasks are in modules.
@@ -114,4 +119,8 @@ The minimum number of packages of buns required
 The number of hot dogs that will be left over
 
 The number of buns that will be left over
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> upstream/master
