@@ -4,7 +4,17 @@
 
 A bug collector collects bugs every day for seven days. Design a program that keeps a running total of the number of bugs collected during the seven days. The loop should ask for the number of bugs collected for each day, and when the loop is finished, the program should display the total number of bugs collected.
 
+```
+Declare Integer dailyNumBugs, totalNumBugs, i
+Constant Integer MAX = 7
+For (i = 1; i <= MAX; i++)
+    Prompt "Enter number of bugs for today"
+    Input dailyNumBugs
+    totalNumBugs += dailyNumBugs
+End For
+Display totalNumBugs
 
+```
 
 # Calories Burned
 
