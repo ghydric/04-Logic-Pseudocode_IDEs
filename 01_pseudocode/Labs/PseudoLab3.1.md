@@ -25,13 +25,9 @@ End If
 End If
 ```
 5. Design nested decision structures that perform the following: If amount1 is greater than 10 and amount2 is less than 100, display the greater of amount1 and amount2.
-<<<<<<< HEAD
 ```
 if 
 ```
-=======
-
->>>>>>> upstream/master
 6. Rewrite the following If-Then-Else If statement as a Select Case statement.
 ```
 If selection == 1 Then

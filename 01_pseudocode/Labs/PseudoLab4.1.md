@@ -3,18 +3,18 @@
 
 Design a modular program that asks the user to enter a distance in kilometers, and then converts that distance to miles. The conversion formula is as follows:
 
-<<<<<<< HEAD
 Miles = Kilometers * 0.6214  
 ```  
 //main()
-//Start
-    Declare Integer kiloDist
-    Declare Real miles
+//Start 
+    //Declarations
+    Declare Real kiloDist //number of kilometers input by user
+    Declare Real miles //number of miles after kilometer conversion
     
-    Prompt "Please enter a distance in kilometers"
-    Input kiloDist
-    set miles = CalcMiles(kiloDist)
-    Display "$0 kilometers is equal to $1 miles", kiloDist, miles
+    Prompt "Please enter a distance in kilometers" //user prompt
+    Input kiloDist //saving user input to kiloDist variable
+    set miles = CalcMiles(kiloDist) //call CalcMiles function passing in kiloDist as argument
+    Display "$0 kilometers is equal to $1 miles", kiloDist, miles //displays kilometers to miles conversion
 //Stop
 
 //CalcMiles(kmDist)
@@ -24,10 +24,6 @@ Miles = Kilometers * 0.6214
     Return (kmDist * CONVERSION)
 //Stop
 ```  
-=======
-![image](https://user-images.githubusercontent.com/47218880/67329523-99b2e300-f4e0-11e9-8a30-3f31fbd76ae1.png)
-
->>>>>>> upstream/master
 ## Sales Tax Program Refactoring (Mandatory)
 
 See program below,  the Sales Tax program. This program calculates and displays the county and state sales tax on a purchase. Refactor it so the subtasks are in modules.
@@ -62,7 +58,51 @@ Display "County Tax: ", countyTax
 Display "Total Tax: ", totalTax
 Display "Sale total: ", totalSale
 ```
- 
+ Refactored code below:  
+ ```
+// Module main()
+
+    // Variable declarations
+    Declare Real purchase, stateTax, countyTax, totalTax, totalSale
+
+    // Constants for the state and county tax rates
+    Constant Real STATE_TAX_RATE = 0.04
+    Constant Real COUNTY_TAX_RATE = 0.02
+
+    // Get the amount of the purchase.
+    Display "Enter the amount of the purchase."
+    Input purchase
+
+    set stateTax = CalcStateTax(STATE_TAX_RATE, purchase)
+
+//end Module main()
+
+#########################
+
+// Module CalcStateTax(Real stateTx, merch)
+
+    // Calculate the state sales tax.
+    Return (merch * stateTx)
+
+//end Module CalcStateTax()
+
+// Calculate the county sales tax.
+Set countyTax = purchase * COUNTY_TAX_RATE
+
+// Calculate the total tax.
+Set totalTax = stateTax + countyTax
+
+// Calculate the total of the sale.
+Set totalSale = purchase + totalTax
+
+// Display information about the sale.
+Display "Purchase Amount: $", purchase
+Display "State Tax: ", stateTax
+Display "County Tax: ", countyTax
+Display "Total Tax: ", totalTax
+Display "Sale total: ", totalSale
+
+ ```
 
 
 
