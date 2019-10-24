@@ -1,7 +1,15 @@
 # Input Validation Exercise Workbench
 
 Design an algorithm that prompts the user to enter a positive nonzero number and validates the input.
-
+```
+Function main()
+   Declare Integer num
+   Do
+      Prompt "Please enter a positive nonzero number"
+      Input num
+   While num <= 0
+End Function main
+```
 Design an algorithm that prompts the user to enter a number in the range of 1 through 100 and validates the input.
 
 Design an algorithm that prompts the user to enter “yes” or “no” and validates the input. (Use a case-insensitive comparison.)
