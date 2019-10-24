@@ -8,7 +8,32 @@ Design a payroll program that prompts the user to enter an employee’s hourly p
 ## Theater Seating Revenue with Input Validation
 
 A dramatic theater has three seating sections, and it charges the following prices for tickets in each section: section A seats cost $20 each, section B seats cost $15 each, and section C seats cost $10 each. The theater has 300 seats in section A, 500 seats in section B, and 200 seats in section C. Design a program that asks for the number of tickets sold in each section and then displays the amount of income generated from ticket sales. The program should validate the numbers that are entered for each section.
+```
+Function main()
+	Declare Integer sold_A, sold_B, sold_C
+	Constant Integer MAX_A = 300
+	Constant Integer MAX_B = 500
+	Constant Integer MAX_C = 200
+	
+	Do
+		Prompt "How many tickets were sold in section A?"
+		input sold_A
+		If sold_A <= 0 OR sold_A > MAX_A Then
+			Display "Invalid amount supplied"
+		End If
+	While sold_A <= 0 OR sold_A > MAX_A
 
+	
+End Function main
+
+Function Integer CalcRevenue(Int a, Int b, Int c)
+	Constant Integer SEC_A = 20
+	Constant Integer SEC_B = 15
+	Constant Integer SEC_C = 10
+
+	Return (a * SEC_A + b * SEC_B + c * SEC_C)
+End Function CalcRevenue
+```
 ## Fat Gram Calculator
 
 Design a program that asks for the number of fat grams and calories in a food item. Validate the input as follows:
@@ -33,7 +58,27 @@ The speed limit should be at least 20, but not greater than 70.
 
 The driver’s speed should be at least the value entered for the speed limit ­(otherwise the driver was not speeding).
 Once correct data has been entered, the program should calculate and display the number of miles per hour over the speed limit that the driver was doing.
+```
+Function main()
+	Declare Integer speed, limit, amtOver
+	Do
+		Prompt "What is the speed limit?"
+		Input limit
+	While limit < 20 OR limit > 70
+	Prompt "What is the driver's speed?"
+	Input speed
+	If speed <= limit Then
+		Display "Driver was not speeding"
+	Else
+		set amtOver = CalcSpeedOverLimit(speed,limit)
+		Display "Driver was going {0} mph over the limit of {1} mph.", amtOver, limit
+	End If
+End Function main
 
+Function Integer CalcSpeedOverLimit(Integer s,Integer l)
+	Return (s - l)
+End Function CalcSpeedOverLimit
+```
 # Rock, Paper, Scissors Modification (MANDATORY)
 
 In a previous Programming Exercise option you were asked to design a program that plays the Rock, Paper, Scissors game. In the program, the user enters one of the three strings—"rock", "paper", or "scissors"—at the keyboard. Add input validation (with a case-insensitive comparison) to make sure the user enters one of those strings only.
@@ -60,8 +105,10 @@ End Module
 
 // The getNumber module gets an integer
 Module getNumber(Integer Ref inputAnswer)
+	Do	
 		Display “Enter 1 for rock, 2 for paper, 3 for scissors:  “
 		Input inputAnswer
+	While inputAnswer != 1 AND inputAnswer != 2 AND inputAnswer != 3
 End Module
 
 // The showWinner module shows if number is a prime
