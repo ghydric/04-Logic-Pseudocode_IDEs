@@ -19,15 +19,65 @@ Display totalNumBugs
 # Calories Burned
 
 Running on a particular treadmill you burn 3.9 calories per minute. Design a program that uses a loop to display the number of calories burned after 10, 15, 20, 25, and 30 minutes.
+```
+Declare Integer i
+Declare Real totalCals
+Constant Real CALS = 3.9
+For (i = 10; i <= 30; i + 5)
+    set totalCals = i * CALS
+    Display "You have burned $0 calories after $1 minutes", totalCals, i
+End For
 
+```
 # Budget Analysis
 
 Design a program that asks the user to enter the amount that he or she has budgeted for a month. A loop should then prompt the user to enter each of his or her expenses for the month, and keep a running total. When the loop finishes, the program should display the amount that the user is over or under budget.
+```
+Declare Real budget, expense, totalExpense, amtVaried
+Constant String NO = "n"
 
+Prompt "How much is your budget this month?"
+Input budget
+
+Do
+    Prompt "Enter expense amount, or 'n' to total expenses"
+    Input expense
+    if expense == NO then
+        break
+    else
+        totalExpense += expense
+    endif
+While expense != NO
+
+if totalExpense > budget then
+    set amtVaried = totalExpense - budget
+    Display "You have gone over budget by $0!", amtVaried
+elseif totalExpense < budget then
+    set amtVaried = budget - totalExpense
+    Display "You have gone under budget by $0!, amtVaried
+else
+    Display "You have stuck to budget exactly!"
+endif
+
+```
 # Sum of Numbers
 
 Design a program with a loop that asks the user to enter a series of positive numbers. The user should enter a negative number to signal the end of the series. After all the positive numbers have been entered, the program should display their sum.
+```
+Declare Real numEntered, sum
 
+Do
+    Prompt "Enter a number to add, or a negative number to find the sum of all numbers entered"
+    Input numEntered
+    if numEntered < 0 then
+        break
+    else
+        sum += numEntered
+    endif
+While numEntered >= 0
+Display "The sum is $0", sum
+
+```
 # Tuition Increase
 
 At one college, the tuition for a full-time student is $6,000 per semester. It has been announced that the tuition will increase by 2 percent each year for the next five years. Design a program with a loop that displays the projected semester tuition amount for the next five years.
