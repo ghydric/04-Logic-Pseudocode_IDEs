@@ -7,10 +7,41 @@ The area of a rectangle is calculated according to the following formula:
 ![image](https://user-images.githubusercontent.com/47218880/67446156-3e165180-f5d5-11e9-8673-1dab25034bff.png)
 
 Design a function that accepts a rectangle’s width and length as arguments and returns the rectangle’s area. Use the function in a program that prompts the user to enter the rectangle’s width and length, and then displays the rectangle’s area.
+```
+Function main()
+  Declare Real width, length, area
 
+  Prompt "Enter the width of the rectangle"
+  Input width
+  Prompt "Enter the length of the rectangle"
+  Input length
+  set area = CalcArea(width, length)
+  Display "The area of your rectangle is ", area
+
+End Function main
+
+Function Real CalcArea(Real w, Real l)
+    Return (w * l)
+End Function CalcArea
+```
 ## Feet to Inches
 
 One foot equals 12 inches. Design a function named feetToInches that accepts a number of feet as an argument, and returns the number of inches in that many feet. Use the function in a program that prompts the user to enter a number of feet and then displays the number of inches in that many feet.
+```
+Function main()
+  Declare Real feet, inches
+
+  Prompt "Enter the number of feet to convert to inches"
+  Input feet
+
+  set inches = FeetToInches(feet)
+  Display "There are {0} inches in {1} feet.", inches, feet
+End Function main
+
+Function Real FeetToInches (Real ft) 
+  Return (ft * 12)
+End Function FeetToInches
+```
 
 ## Math Quiz
 
@@ -20,11 +51,56 @@ Design a program that gives simple math quizzes. The program should display two 
 + 129
 ```
 The program should allow the student to enter the answer. If the answer is correct, a message of congratulations should be displayed. If the answer is incorrect, a message showing the correct answer should be displayed.
+```
+Import Math
 
+Function main()
+  Declare Integer num1, num2, sum, guess
+  set num1 = Random(1,500)
+  set num2 = Random(1,500)
+  set sum = Sum(num1,num2)
+
+  Display "  ", num1
+  Display "+ ", num2
+  Display "_____"
+  Prompt "What is your answer?"
+  Input guess
+
+  If guess != sum Then
+    Display "Incorrect, the correct answer is ", sum
+  Else
+    Display "Congratulations, you are correct!"
+  End IF
+
+End Function main
+```
 ## Maximum of Two Values
 
 Design a function named max that accepts two integer values as arguments and returns the value that is the greater of the two. For example, if 7 and 12 are passed as arguments to the function, the function should return 12. Use the function in a program that prompts the user to enter two integer values. The program should display the value that is the greater of the two.
+```
+Function main()
 
+  Declare Integer num1, num2, greater
+
+  Prompt "Please enter an integer"
+  Input num1
+  Prompt "Please enter another integer"
+  Input num2
+
+  set greater = max(num1,num2)
+
+  Display "The greater of the two numbers is ", greater
+
+End Function main
+
+Function Integer max (Integer x, Integer y)
+  If x >= y Then
+    Return x
+  Else
+    Return y
+  End If
+End Function max
+```
 ## Falling Distance
 
 When an object is falling because of gravity, the following formula can be used to determine the distance the object falls in a specific time period:
@@ -34,7 +110,21 @@ When an object is falling because of gravity, the following formula can be used 
 The variables in the formula are as follows: d is the distance in meters, g is 9.8, and t is the amount of time, in seconds, that the object has been falling.
 
 Design a function named fallingDistance that accepts an object’s falling time (in seconds) as an argument. The function should return the distance, in meters, that the object has fallen during that time interval. Design a program that calls the function in a loop that passes the values 1 through 10 as arguments and displays the return value.
+```
+Function main()
+  Declare Real time, distance
+  For (time = 1; time <= 10; time++)
+    set distance = fallingDistance(time)
+    Display "The distance traveled is {0} meters over {1} seconds", distance, time
+  End For
+End Function main
 
+Function Real fallingDistance(Real t)
+  Constant Real GRAV = 9.8
+  Declare Real dist = (GRAV * t ^ 2) / 2
+  Return dist
+End Function fallingDistance
+```
 ## Kinetic Energy
 
 In physics, an object that is in motion is said to have kinetic energy. The following formula can be used to determine a moving object’s kinetic energy:
