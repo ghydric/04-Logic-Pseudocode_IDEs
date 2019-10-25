@@ -3,7 +3,32 @@
 ## Total Sales
 
 Design a program that asks the user to enter a store’s sales for each day of the week. The amounts should be stored in an array. Use a loop to calculate the total sales for the week and display the result.
+```
+Funtion main()
+    Declare String days[7] = "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+    Declare Real sales[7]
+    Declare Integer index = 0
+    Declare Real totalSales
 
+    Foreach day in days
+        Do
+            Prompt "How much were sales for " + days[index] + "?"
+            Input sales[index]
+        While sales[index] < 0
+    End Foreach
+
+    Set totalSales = CalcTotalSales(sales)
+    Display "Your total sales for the week are " + totalSales + "!"
+End Function main
+
+Function Real CalcTotalSales(Real array[] sales)
+    Declare Real total = 0
+    Foreach sale in sales
+        total += sale
+    End Foreach
+    Return total
+End Function CalcTotalSales
+```
 ## Lottery Number Generator
 
 Design a program that generates a 7-digit lottery number. The program should have an Integer array with 7 elements. Write a loop that steps through the array, randomly generating a number in the range of 0 through 9 for each element. Then write another loop that displays the contents of the array.
